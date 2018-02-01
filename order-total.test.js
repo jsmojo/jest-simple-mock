@@ -6,19 +6,7 @@ it('calls vatapi.com if country', () => {
             VAT_API_KEY: 'key123'
         }
     }
-    // const fakeFetch = (url, opts) => {
-    //     expect(opts.headers.apikey).toBe('key123')
-    //     expect(url).toBe('https://vatapi.com/v1/country-code-check?code=DE');
-    //     return Promise.resolve({
-    //         json: () => Promise.resolve({
-    //             rates: {
-    //                 standard: {
-    //                     value: 19
-    //                 }
-    //             }
-    //         })
-    //     })
-    // }
+    
     const fakeFetch = jest.fn().mockReturnValue(Promise.resolve({
         json: () => Promise.resolve({
             rates: {
